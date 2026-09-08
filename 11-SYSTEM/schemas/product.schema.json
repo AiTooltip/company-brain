@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AI-Tooltip/company-brain/schemas/product.schema.json",
+  "title": "Company Brain Product Metadata",
+  "type": "object",
+  "required": ["id", "name", "status", "lifecycle", "owner", "last_reviewed", "approved_by", "sources"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^product-[a-z0-9][a-z0-9-]*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "status": { "enum": ["approved", "confirmed", "proposed", "unverified", "conflicting", "superseded"] },
+    "lifecycle": { "enum": ["concept", "active", "maintenance", "retired", "unknown"] },
+    "owner": { "type": "string", "minLength": 1 },
+    "last_reviewed": { "anyOf": [{ "type": "string", "format": "date" }, { "const": "unknown" }] },
+    "approved_by": { "type": "string", "minLength": 1 },
+    "sources": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "status": { "const": "approved" } }, "required": ["status"] },
+      "then": { "properties": { "approved_by": { "not": { "const": "unknown" } } } }
+    }
+  ],
+  "additionalProperties": true
+}

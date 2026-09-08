@@ -1,0 +1,49 @@
+# Local Company Brain identity and machine state
+.company-brain/current-user.md
+.company-brain/cache/
+.company-brain/tmp/
+.company-brain/update-report.*
+
+# Secrets and local environment files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+
+# Operating-system and editor noise
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Generated dependencies and caches
+node_modules/
+.next/
+.nuxt/
+dist/
+build/
+coverage/
+.cache/
+.turbo/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Temporary exports
+*.tmp
+*.temp
+*.bak
+*.log
+
+# Keep intentionally supplied assets and outputs tracked; do not add broad
+# image, video, archive, 09-ASSETS, or 10-OUTPUTS ignore rules here.

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AI-Tooltip/company-brain/schemas/research.schema.json",
+  "title": "Company Brain Research Metadata",
+  "type": "object",
+  "required": ["id", "title", "status", "owner", "requested_by", "created", "last_updated", "decision_supported"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^research-[a-z0-9][a-z0-9-]*$" },
+    "title": { "type": "string", "minLength": 1 },
+    "status": { "enum": ["proposed", "active", "blocked", "completed", "superseded"] },
+    "owner": { "type": "string", "minLength": 1 },
+    "requested_by": { "type": "string", "minLength": 1 },
+    "created": { "type": "string", "format": "date" },
+    "last_updated": { "type": "string", "format": "date" },
+    "decision_supported": { "type": "string", "minLength": 1 }
+  },
+  "additionalProperties": true
+}

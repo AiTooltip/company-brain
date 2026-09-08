@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AI-Tooltip/company-brain/schemas/brain-config.schema.json",
+  "title": "Company Brain Configuration",
+  "type": "object",
+  "required": ["schemaVersion", "framework", "paths", "governance", "statusVocabulary"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "framework": {
+      "type": "object",
+      "required": ["name", "version", "source", "defaultBranch", "updateManifest"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+        "source": { "const": "https://github.com/AI-Tooltip/company-brain" },
+        "defaultBranch": { "const": "main" },
+        "updateManifest": { "const": "update-manifest.json" }
+      },
+      "additionalProperties": false
+    },
+    "paths": {
+      "type": "object",
+      "required": ["inbox", "migrationInbox", "company", "departments", "brand", "products", "projects", "research", "content", "references", "assets", "outputs", "system", "currentUser"],
+      "additionalProperties": { "type": "string", "minLength": 1 }
+    },
+    "governance": {
+      "type": "object",
+      "required": ["humanApprovalRequiredForDecisions", "humanApprovalRequiredForCompanyKnowledgeReplacement", "preserveSourceProvenance", "logEveryAIInteraction", "meaningfulActivityOnly"],
+      "properties": {
+        "humanApprovalRequiredForDecisions": { "const": true },
+        "humanApprovalRequiredForCompanyKnowledgeReplacement": { "const": true },
+        "preserveSourceProvenance": { "const": true },
+        "logEveryAIInteraction": { "const": false },
+        "meaningfulActivityOnly": { "const": true }
+      },
+      "additionalProperties": false
+    },
+    "statusVocabulary": {
+      "type": "array",
+      "uniqueItems": true,
+      "contains": { "const": "approved" },
+      "items": { "enum": ["approved", "confirmed", "proposed", "unverified", "conflicting", "superseded"] }
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AI-Tooltip/company-brain/schemas/decision.schema.json",
+  "title": "Company Brain Approved Decision Metadata",
+  "type": "object",
+  "required": ["id", "title", "status", "decision_date", "approved_by", "approval_authority", "recorded_by", "recorded_on", "scope", "supersedes", "review_date"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^decision-[a-z0-9][a-z0-9-]*$" },
+    "title": { "type": "string", "minLength": 1 },
+    "status": { "const": "approved" },
+    "decision_date": { "anyOf": [{ "$ref": "#/$defs/date" }, { "const": "unknown" }] },
+    "approved_by": { "type": "string", "minLength": 1, "not": { "const": "unknown" } },
+    "approval_authority": { "type": "string", "minLength": 1, "not": { "const": "unknown" } },
+    "recorded_by": { "type": "string", "minLength": 1 },
+    "recorded_on": { "$ref": "#/$defs/date" },
+    "scope": { "enum": ["company", "department", "brand", "product", "project"] },
+    "supersedes": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "review_date": { "anyOf": [{ "$ref": "#/$defs/date" }, { "const": "unknown" }] }
+  },
+  "$defs": { "date": { "type": "string", "format": "date" } },
+  "additionalProperties": true
+}

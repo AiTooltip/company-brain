@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AI-Tooltip/company-brain/schemas/update-manifest.schema.json",
+  "title": "Company Brain Update Manifest",
+  "type": "object",
+  "required": ["schemaVersion", "frameworkVersion", "source", "defaultBranch", "ownershipResolution", "frameworkOwned", "companyOwned", "updatePolicy"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "schemaVersion": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "frameworkVersion": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "source": { "const": "https://github.com/AI-Tooltip/company-brain" },
+    "defaultBranch": { "const": "main" },
+    "ownershipResolution": { "type": "array", "minItems": 3, "items": { "type": "string", "minLength": 1 } },
+    "frameworkOwned": {
+      "type": "object",
+      "required": ["description", "files"],
+      "properties": {
+        "description": { "type": "string", "minLength": 1 },
+        "files": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/path" } }
+      },
+      "additionalProperties": false
+    },
+    "companyOwned": {
+      "type": "object",
+      "required": ["description", "paths", "prefixes"],
+      "properties": {
+        "description": { "type": "string", "minLength": 1 },
+        "paths": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/path" } },
+        "prefixes": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/path" } }
+      },
+      "additionalProperties": false
+    },
+    "updatePolicy": {
+      "type": "object",
+      "required": ["checkIsReadOnly", "automaticOverwrite", "automaticDelete", "explicitApprovalRequiredToApply", "companyKnowledgeConflictRequiresExplicitApproval", "unlistedPathsDefaultToCompanyOwned"],
+      "properties": {
+        "checkIsReadOnly": { "const": true },
+        "automaticOverwrite": { "const": false },
+        "automaticDelete": { "const": false },
+        "explicitApprovalRequiredToApply": { "const": true },
+        "companyKnowledgeConflictRequiresExplicitApproval": { "const": true },
+        "unlistedPathsDefaultToCompanyOwned": { "const": true }
+      },
+      "additionalProperties": false
+    }
+  },
+  "$defs": {
+    "path": { "type": "string", "minLength": 1, "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+$" }
+  },
+  "additionalProperties": false
+}

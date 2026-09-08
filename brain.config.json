@@ -1,0 +1,42 @@
+{
+  "$schema": "./11-SYSTEM/schemas/brain-config.schema.json",
+  "schemaVersion": "1.0.0",
+  "framework": {
+    "name": "AI Tooltip Company Brain",
+    "version": "1.0.0",
+    "source": "https://github.com/AI-Tooltip/company-brain",
+    "defaultBranch": "main",
+    "updateManifest": "update-manifest.json"
+  },
+  "paths": {
+    "inbox": "00-INBOX",
+    "migrationInbox": "00-MIGRATE-OLD-SETUP",
+    "company": "01-COMPANY",
+    "departments": "02-DEPARTMENTS",
+    "brand": "03-BRAND",
+    "products": "04-PRODUCTS",
+    "projects": "05-PROJECTS",
+    "research": "06-RESEARCH",
+    "content": "07-CONTENT",
+    "references": "08-REFERENCES",
+    "assets": "09-ASSETS",
+    "outputs": "10-OUTPUTS",
+    "system": "11-SYSTEM",
+    "currentUser": ".company-brain/current-user.md"
+  },
+  "governance": {
+    "humanApprovalRequiredForDecisions": true,
+    "humanApprovalRequiredForCompanyKnowledgeReplacement": true,
+    "preserveSourceProvenance": true,
+    "logEveryAIInteraction": false,
+    "meaningfulActivityOnly": true
+  },
+  "statusVocabulary": [
+    "approved",
+    "confirmed",
+    "proposed",
+    "unverified",
+    "conflicting",
+    "superseded"
+  ]
+}

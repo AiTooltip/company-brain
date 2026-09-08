@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/AI-Tooltip/company-brain/schemas/team-member.schema.json",
+  "title": "Company Brain Team Member Metadata",
+  "type": "object",
+  "required": ["id", "name", "status", "role", "departments", "joined", "last_reviewed"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^team-[a-z0-9][a-z0-9-]*$" },
+    "name": { "type": "string", "minLength": 1 },
+    "status": { "enum": ["active", "inactive", "alumni"] },
+    "role": { "type": "string", "minLength": 1 },
+    "departments": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+    "joined": { "anyOf": [{ "type": "string", "format": "date" }, { "const": "unknown" }] },
+    "last_reviewed": { "type": "string", "format": "date" }
+  },
+  "additionalProperties": true
+}
