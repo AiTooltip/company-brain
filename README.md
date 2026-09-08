@@ -1,54 +1,80 @@
-# AI Tooltip Company Brain
+# AI TOOLTIP COMPANY BRAIN
 
-A local, portable source of truth that gives a company and its AI tools shared context, history, goals, approvals, research, references, assets, and project memory.
+Give your company a persistent source of truth that your team and AI can work from.
 
-The Company Brain is deliberately human-governed. AI may organize evidence, ask questions, propose options, execute approved work, and maintain records. It must not silently turn a suggestion, inference, or imported document into a company decision.
+**FILES = COMPANY MEMORY**
 
-## Start in five steps
+**AI = INTERFACE**
 
-1. Download or clone this entire repository.
-2. Put existing documents, exports, assets, or older AI Tooltip folders in `00-INBOX` (or `00-MIGRATE-OLD-SETUP` for an older setup).
-3. Open the whole folder in Codex Desktop.
-4. Say: **Set up my company brain**
-5. Review and approve the important conclusions Codex proposes.
+The Company Brain keeps knowledge, goals, history, approved decisions, projects, brand information, research, references, assets, outputs, and meaningful activity in files you control. AI can research, organize, propose, identify implications, execute approved work, and maintain approved knowledge. Humans remain responsible for company decisions.
 
-Codex will inspect the material first, ask only for information it cannot reliably find, and keep uncertain claims visibly marked until a person confirms them.
+## GET STARTED
 
-> **Keep company information private.** This starter is public, but a filled Company Brain may contain confidential material. Keep your working copy local or use a private repository unless your company has explicitly approved every item for public release.
+1. Download this repository from **Code → Download ZIP**.
+2. Unzip it.
+3. Add existing company material to `00-INBOX`.
+4. Open the whole folder in Codex Desktop.
+5. Say: **“Set up my company brain.”**
 
-Read [START-HERE.md](START-HERE.md) for the non-technical guide. The operating rules AI tools must follow are in [AGENTS.md](AGENTS.md).
+That's it. Codex analyzes existing material first, asks only for important missing information, and requests approval before establishing consequential conclusions.
 
-## The map
+## USED MY PREVIOUS AI TOOLTIP VIDEOS?
+
+1. Put your old `AI-DESIGN-SKILLS` and/or `codex-design-studio` folder into `00-MIGRATE-OLD-SETUP/`.
+2. Say: **“Migrate my previous AI Tooltip setup.”**
+
+The migration preserves useful brand information, skills, references, assets, projects, outputs, Storybook systems, and Theme Editors while excluding obsolete prompts and generated dependencies.
+
+## SOLO
+
+Download the ZIP, keep it locally, and open it with Codex Desktop. You do not need Git or a GitHub account after download. Read [START-HERE.md](START-HERE.md) for the short walkthrough.
+
+## TEAM
+
+Use a **private GitHub repository** for your actual company. GitHub Desktop is recommended for non-technical teammates.
+
+`Pull/sync → work → review meaningful changes → commit → push`
+
+The public AI Tooltip repository is the framework and update source. Your private repository is the actual Company Brain. **Do not use a public fork for confidential company data.** See [COLLABORATION.md](COLLABORATION.md).
+
+## PRIVACY
+
+The persistent Company Brain lives in files you control, reducing dependence on AI-provider chat memory. This does **not** mean cloud AI providers never receive the information. When you ask Codex, Claude, or another cloud service to work with files, relevant content may be sent to that provider for processing. Local files do not automatically make AI processing private or offline.
+
+Read [PRIVACY.md](PRIVACY.md) and review the settings and policies of each AI provider you use.
+
+## UPDATES
+
+Say **“Check for AI Tooltip updates.”** The read-only checker uses stable releases from the official repository and does not require Git. It shows the current/latest versions, framework changes, files involved, and possible customization conflicts. Nothing is installed automatically.
+
+Only after reviewing the report may you say **“Apply the approved update.”** Company-owned files and existing unlisted files are never automatic overwrite targets.
+
+Official source: [AI-Tooltip/company-brain](https://github.com/AI-Tooltip/company-brain)
+
+## LICENSE
+
+This is a free source-available Company Brain starter, not open source.
+
+Free to use for yourself or internally within your company. You may modify your own private copy and use what you create with it. You may not resell, redistribute, re-upload, mirror, repackage, or publish the Company Brain framework, prompts, or AI Tooltip skills as your own resource. If you want to share it, link to the official repository.
+
+See [LICENSE.md](LICENSE.md) for the full AI Tooltip Company Brain Limited Use License.
+
+## ADVANCED STRUCTURE
 
 | Folder | Purpose |
 | --- | --- |
-| `00-INBOX` | Temporary landing zone for unsorted material |
-| `00-MIGRATE-OLD-SETUP` | Safe intake for AI-DESIGN-SKILLS and codex-design-studio |
-| `01-COMPANY` | Canonical company profile, goals, history, team, decisions, activity |
-| `02-DEPARTMENTS` | Department context and working guidance |
-| `03-BRAND` | Approved brand facts, voice, visual guidance, and guidelines |
-| `04-PRODUCTS` | One durable record per product or service |
-| `05-PROJECTS` | Time-bounded initiatives with owners, status, and outcomes |
-| `06-RESEARCH` | Questions, evidence, findings, and research status |
-| `07-CONTENT` | Content plans, drafts, and approved content records |
-| `08-REFERENCES` | External or internal reference material and source notes |
+| `00-INBOX` | Unsorted source material awaiting review |
+| `00-MIGRATE-OLD-SETUP` | Intake for previous AI Tooltip systems |
+| `01-COMPANY` | Company identity, audience, strategy, goals, team, decisions, history, activity |
+| `02-DEPARTMENTS` | Department instructions, company context, Creative workflows and skills |
+| `03-BRAND` | Brand, positioning, voice, visual guidance, design system, guidelines |
+| `04-PRODUCTS` | Durable product and service records |
+| `05-PROJECTS` | Time-bounded initiatives and execution state |
+| `06-RESEARCH` | Questions, evidence, findings, and limitations |
+| `07-CONTENT` | Content plans, briefs, drafts, and approved records |
+| `08-REFERENCES` | Source and inspiration material with provenance |
 | `09-ASSETS` | Source, working, and approved reusable assets |
-| `10-OUTPUTS` | Deliverables produced by projects and workflows |
-| `11-SYSTEM` | Framework workflows, templates, schemas, scripts, and reviews |
+| `10-OUTPUTS` | Project deliverables and reports |
+| `11-SYSTEM` | Provider-independent rules, workflows, templates, schemas, migrations, and update tools |
 
-## A few important rules
-
-- Put raw material in the inbox; do not treat it as approved truth yet.
-- Record consequential, approved decisions in `01-COMPANY/decisions`.
-- Record meaningful activity, not chat transcripts or every AI action.
-- Keep shared team profiles in `01-COMPANY/team`.
-- Keep the current computer's user identity in `.company-brain/current-user.md`; it is intentionally not committed.
-- Never store passwords, API keys, private keys, session cookies, or access tokens here, even in a private copy.
-
-## Updates
-
-The official framework source is [AI-Tooltip/company-brain](https://github.com/AI-Tooltip/company-brain). In Codex Desktop, say **Check for AI Tooltip updates**. The check is read-only and reports framework differences; it does not overwrite company information.
-
-## License
-
-Add the license selected by the repository owner before public distribution if one has not already been added.
+The canonical operating rules are in [11-SYSTEM/OPERATING-SYSTEM.md](11-SYSTEM/OPERATING-SYSTEM.md). [AGENTS.md](AGENTS.md) is the Codex adapter; [CLAUDE.md](CLAUDE.md) is a lightweight Claude Code adapter. Codex Desktop remains the primary tested V1 workflow.

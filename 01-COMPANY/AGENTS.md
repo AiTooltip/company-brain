@@ -1,8 +1,8 @@
 # Company Context Instructions
 
-Apply the root `AGENTS.md` first.
+Follow `11-SYSTEM/OPERATING-SYSTEM.md` first.
 
-Work here only for company-wide, durable knowledge. Treat changes to identity, purpose, strategy, priorities, authority, ownership, policy, and public commitments as consequential. Draft them as `proposed` until a human explicitly confirms or approves them.
+Work here only for company-wide, durable knowledge. Use `COMPANY.md` for identity/business model/governance, `audience.md` for primary audiences, and `strategy.md` for approved strategic direction. Treat changes to identity, purpose, strategy, priorities, authority, ownership, policy, and public commitments as consequential. Draft them as `proposed` until an authorized human explicitly confirms or approves them.
 
 Before editing, read the relevant active decision records and existing canonical file. Prefer updating one canonical record and adding a history note over duplicating the fact elsewhere. Never infer approval from a profile, job title, old document, or local current-user file.
 

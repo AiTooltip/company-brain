@@ -3,20 +3,22 @@
   "$id": "https://github.com/AI-Tooltip/company-brain/schemas/update-manifest.schema.json",
   "title": "Company Brain Update Manifest",
   "type": "object",
-  "required": ["schemaVersion", "frameworkVersion", "source", "defaultBranch", "ownershipResolution", "frameworkOwned", "companyOwned", "updatePolicy"],
+  "required": ["schemaVersion", "frameworkVersion", "source", "updateChannel", "releaseTag", "ownershipResolution", "frameworkOwned", "companyOwned", "updatePolicy"],
   "properties": {
     "$schema": { "type": "string" },
-    "schemaVersion": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
-    "frameworkVersion": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
+    "schemaVersion": { "$ref": "#/$defs/version" },
+    "frameworkVersion": { "$ref": "#/$defs/version" },
     "source": { "const": "https://github.com/AI-Tooltip/company-brain" },
-    "defaultBranch": { "const": "main" },
-    "ownershipResolution": { "type": "array", "minItems": 3, "items": { "type": "string", "minLength": 1 } },
+    "updateChannel": { "const": "stable-releases" },
+    "releaseTag": { "type": "string", "pattern": "^v(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$" },
+    "ownershipResolution": { "type": "array", "minItems": 5, "items": { "type": "string", "minLength": 1 } },
     "frameworkOwned": {
       "type": "object",
-      "required": ["description", "files"],
+      "required": ["description", "files", "sensitiveReviewFiles"],
       "properties": {
         "description": { "type": "string", "minLength": 1 },
-        "files": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/path" } }
+        "files": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/path" } },
+        "sensitiveReviewFiles": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/path" } }
       },
       "additionalProperties": false
     },
@@ -26,26 +28,33 @@
       "properties": {
         "description": { "type": "string", "minLength": 1 },
         "paths": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/path" } },
-        "prefixes": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/path" } }
+        "prefixes": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/prefix" } }
       },
       "additionalProperties": false
     },
     "updatePolicy": {
       "type": "object",
-      "required": ["checkIsReadOnly", "automaticOverwrite", "automaticDelete", "explicitApprovalRequiredToApply", "companyKnowledgeConflictRequiresExplicitApproval", "unlistedPathsDefaultToCompanyOwned"],
+      "required": ["channel", "semanticReleaseTags", "checkIsReadOnly", "gitRequiredForCheck", "automaticInstall", "automaticOverwrite", "automaticDelete", "explicitApprovalRequiredToApply", "companyKnowledgeConflictRequiresExplicitApproval", "localFrameworkCustomizationRequiresReview", "unlistedPathsDefaultToCompanyOwned"],
       "properties": {
+        "channel": { "const": "stable-releases" },
+        "semanticReleaseTags": { "const": true },
         "checkIsReadOnly": { "const": true },
+        "gitRequiredForCheck": { "const": false },
+        "automaticInstall": { "const": false },
         "automaticOverwrite": { "const": false },
         "automaticDelete": { "const": false },
         "explicitApprovalRequiredToApply": { "const": true },
         "companyKnowledgeConflictRequiresExplicitApproval": { "const": true },
+        "localFrameworkCustomizationRequiresReview": { "const": true },
         "unlistedPathsDefaultToCompanyOwned": { "const": true }
       },
       "additionalProperties": false
     }
   },
   "$defs": {
-    "path": { "type": "string", "minLength": 1, "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+$" }
+    "version": { "type": "string", "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$" },
+    "path": { "type": "string", "minLength": 1, "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+[^/]$" },
+    "prefix": { "type": "string", "minLength": 2, "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$)).+/$" }
   },
   "additionalProperties": false
 }

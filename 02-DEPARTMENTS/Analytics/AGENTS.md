@@ -1,6 +1,6 @@
 # Analytics Department Instructions
 
-Apply the root `AGENTS.md` first. Load relevant goals, metric definitions, products, decisions, research, and projects.
+Follow `11-SYSTEM/OPERATING-SYSTEM.md` first. Read `DEPARTMENT.md`, then load only relevant metric definitions, experiments/research, goals, products, decisions, and projects.
 
 - Do not invent data, sample sizes, baselines, causality, statistical confidence, or data quality.
 - Define population, timeframe, source, transformations, metric formula, and limitations for material findings.

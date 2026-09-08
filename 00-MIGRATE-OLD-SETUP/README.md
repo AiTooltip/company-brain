@@ -22,4 +22,4 @@ Expected to exclude unless a person asks otherwise:
 - secrets, credentials, machine-local state, and irrelevant logs;
 - reproducible generated bundles when their source exists.
 
-See `11-SYSTEM/workflows/migrate-previous-ai-tooltip-setup.md` for the complete recognition and review process.
+See `11-SYSTEM/workflows/migrate-previous-ai-tooltip-setup.md` plus the exact maps in `11-SYSTEM/migrations/ai-design-skills.md` and `11-SYSTEM/migrations/codex-design-studio.md` for the complete recognition and review process.

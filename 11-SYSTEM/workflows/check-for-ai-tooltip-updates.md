@@ -4,34 +4,23 @@
 
 **Official source:** `https://github.com/AI-Tooltip/company-brain`
 
-**Outcome:** compare this installed framework with the latest public `main` version and report a safe update plan. This workflow is read-only unless the user later explicitly approves an update.
+**Stable channel:** published, non-prerelease GitHub releases tagged `vMAJOR.MINOR.PATCH`
+
+**Outcome:** show a read-only three-way comparison without requiring Git, GitHub CLI, GitHub Desktop, or a GitHub account.
 
 ## Procedure
 
-1. Read the root manual, `brain.config.json`, `update-manifest.json`, and this workflow.
-2. Confirm the configured source is exactly the official repository above. Do not silently switch sources.
-3. Run:
+1. Read the operating system, `brain.config.json`, `update-manifest.json`, and this workflow.
+2. Run `python3 11-SYSTEM/scripts/check_for_updates.py`.
+3. The checker uses standard-library HTTPS to retrieve the latest stable release temporarily. When versions differ, it also retrieves the stable release matching the installed version so it can distinguish local framework customizations from official upstream changes.
+4. Show the user:
+   - current and latest stable versions;
+   - published release notes;
+   - framework files added, changed, or retired upstream;
+   - possible local framework customizations or missing files;
+   - company-owned path collisions and customization conflicts;
+   - files that could change safely after approval.
+5. State that company-owned and existing unlisted files are not overwrite candidates and nothing was changed.
+6. If a safe update exists, ask whether to apply it. Do not interpret the original check request as installation approval.
 
-   `python3 11-SYSTEM/scripts/check_for_updates.py`
-
-4. The script fetches the official public repository into a temporary directory, reads its manifest, and compares framework-owned files. It must not edit Company Brain files.
-5. Report:
-   - installed and latest framework versions;
-   - added, removed, and changed framework-owned files;
-   - locally modified framework files that need careful review;
-   - any manifest/config error or unavailable network state;
-   - a reminder that unlisted and company-owned files were not compared for replacement.
-
-## If the user asks to apply an update
-
-That is a separate, explicit operation. Before writing:
-
-1. Ensure the worktree can be reviewed and preserve unrelated changes.
-2. Use the **remote manifest's framework-owned list only** for candidate framework files. A newly declared framework path may be added after approval only when no file already exists there.
-3. Show locally modified framework files and meaningful behavior changes.
-4. Never delete or replace an existing path classified as company-owned by the local manifest. If an upstream addition collides with an existing unlisted file, preserve the local company file and report the collision.
-5. Treat every existing unlisted path as company-owned. A currently absent path is not company knowledge and may receive a newly declared framework file after review and explicit approval.
-6. If a framework change implies a change to company knowledge or brand-specific skills, preserve the company file and request explicit approval for any later reconciliation.
-7. Apply only what the human approved, validate the brain, and provide a reviewable diff.
-
-An update version number is not permission to overwrite anything.
+If the matching installed release cannot be retrieved, customization detection becomes conservative and the update must not be applied automatically. A network/API/release error changes nothing.

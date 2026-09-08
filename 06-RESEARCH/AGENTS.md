@@ -1,6 +1,6 @@
 # Research Instructions
 
-Apply the root `AGENTS.md` first.
+Follow `11-SYSTEM/OPERATING-SYSTEM.md` first.
 
 - Define the question and decision it may inform before collecting evidence.
 - Prefer primary and authoritative sources; record access or publication dates when relevant.

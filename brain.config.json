@@ -5,7 +5,9 @@
     "name": "AI Tooltip Company Brain",
     "version": "1.0.0",
     "source": "https://github.com/AI-Tooltip/company-brain",
-    "defaultBranch": "main",
+    "updateChannel": "stable-releases",
+    "releaseApi": "https://api.github.com/repos/AI-Tooltip/company-brain/releases",
+    "developmentBranch": "main",
     "updateManifest": "update-manifest.json"
   },
   "paths": {

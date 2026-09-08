@@ -7,4 +7,5 @@ Copy the appropriate template into its company-owned destination, remove instruc
 - `product.md` → `04-PRODUCTS/<product>/PRODUCT.md`
 - `team-member.md` → `01-COMPANY/team/<person>.md`
 - `research.md` → `06-RESEARCH/<question>/RESEARCH.md`
+- `goal.md` → `01-COMPANY/goals/<goal>.md`
 - `activity-entry.md` → append to `01-COMPANY/activity/YYYY-MM.md`

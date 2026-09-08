@@ -1,5 +1,5 @@
 # Brand-Specific Creative Skills
 
-These folders are the stable homes for company-owned creative guidance. Fill them only from approved brand records, validated production practice, and explicit human decisions.
+These folders are stable homes for company-owned creative guidance. Each contains `SKILL.template.md`, not an active `SKILL.md`.
 
-Unlike the general skills, these files are protected company information. Framework updates must not overwrite them.
+A brand skill becomes active only after the Creative Skill Builder or migration workflow creates a real `SKILL.md` from approved brand information, references, examples, dislikes, outputs, and explicit preferences. Generated `SKILL.md` files are protected company information and framework updates must not overwrite them.

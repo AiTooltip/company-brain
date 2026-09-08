@@ -1,6 +1,6 @@
 # Business Department Instructions
 
-Apply the root `AGENTS.md` first. Load only the relevant company profile, goals, decisions, product records, research, and active projects.
+Follow `11-SYSTEM/OPERATING-SYSTEM.md` first. Read `DEPARTMENT.md`, then load only relevant strategy, goals, products, approved business decisions, research, and active projects.
 
 - Distinguish verified figures and contractual facts from forecasts, estimates, and assumptions.
 - State period, currency, tax treatment, source, and calculation method for material numbers.

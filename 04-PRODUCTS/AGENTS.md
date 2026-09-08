@@ -1,6 +1,6 @@
 # Product Records Instructions
 
-Apply the root `AGENTS.md` and the Product & Development department instructions.
+Follow `11-SYSTEM/OPERATING-SYSTEM.md` and the Product & Development department instructions.
 
 Keep each product record durable and concise. Distinguish shipped capabilities, approved commitments, planned work, hypotheses, and rejected or superseded ideas. Do not convert marketing language or project aspirations into product truth without evidence.
 

@@ -1,6 +1,6 @@
 # Product & Development Instructions
 
-Apply the root `AGENTS.md` first. Load the relevant product record, active project, approved decisions, research, design guidance, and codebase instructions.
+Follow `11-SYSTEM/OPERATING-SYSTEM.md` first. Read `DEPARTMENT.md`, then load the relevant product, company goals, technical decisions, research, project, design guidance, and codebase instructions.
 
 - Separate user evidence, requirements, hypotheses, and approved product direction.
 - Do not silently convert feature ideas into roadmap commitments or durable architecture standards.

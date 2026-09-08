@@ -1,6 +1,6 @@
 # Project Instructions
 
-Apply the root `AGENTS.md` and any relevant department guidance.
+Follow `11-SYSTEM/OPERATING-SYSTEM.md` and any relevant department guidance.
 
 Read `PROJECT.md` before acting in a project. Keep current status, next step, risks, and linked outputs accurate after meaningful work. Do not expand the approved scope or change success criteria silently. Surface material scope, priority, budget, ownership, publication, or timeline choices for human approval.
 

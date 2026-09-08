@@ -17,7 +17,7 @@ sources: []
 
 ## Audience and problem
 
-- Primary audience: [Confirmed audience or unknown]
+- Product-specific audience/context: [Link to `01-COMPANY/audience.md` and describe only the relevant subset or difference]
 - Problem/job: [Evidence-backed description]
 - Evidence: [Research/reference links]
 

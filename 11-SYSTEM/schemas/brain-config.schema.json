@@ -9,12 +9,14 @@
     "schemaVersion": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
     "framework": {
       "type": "object",
-      "required": ["name", "version", "source", "defaultBranch", "updateManifest"],
+      "required": ["name", "version", "source", "updateChannel", "releaseApi", "developmentBranch", "updateManifest"],
       "properties": {
         "name": { "type": "string", "minLength": 1 },
         "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
         "source": { "const": "https://github.com/AI-Tooltip/company-brain" },
-        "defaultBranch": { "const": "main" },
+        "updateChannel": { "const": "stable-releases" },
+        "releaseApi": { "const": "https://api.github.com/repos/AI-Tooltip/company-brain/releases" },
+        "developmentBranch": { "const": "main" },
         "updateManifest": { "const": "update-manifest.json" }
       },
       "additionalProperties": false

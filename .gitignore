@@ -3,6 +3,8 @@
 .company-brain/cache/
 .company-brain/tmp/
 .company-brain/update-report.*
+.company-brain/update-downloads/
+.company-brain/update-backups/
 
 # Secrets and local environment files
 .env
@@ -16,6 +18,7 @@ secrets/
 
 # Operating-system and editor noise
 .DS_Store
+__MACOSX/
 Thumbs.db
 Desktop.ini
 *.swp

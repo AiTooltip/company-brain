@@ -6,7 +6,7 @@
 
 ## Procedure
 
-1. Read the root manual, `05-PROJECTS/AGENTS.md`, relevant department guidance, product records, goals, research, and active decisions.
+1. Read `11-SYSTEM/OPERATING-SYSTEM.md`, `05-PROJECTS/AGENTS.md`, relevant department guidance/context, product records, goals, research, and active decisions.
 2. Extract from the user's request and existing material: desired outcome, why now, owner, sponsor, scope, exclusions, success criteria, constraints, dependencies, deliverables, timing, risks, and approval state.
 3. Ask only for missing information that materially changes feasibility, responsibility, commitment, or success. Offer labeled proposals when useful.
 4. If the user has authorized the project, record the approver and evidence. Otherwise create it as `proposed`, not `active`.
