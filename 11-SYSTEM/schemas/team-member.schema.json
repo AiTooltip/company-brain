@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/AI-Tooltip/company-brain/schemas/team-member.schema.json",
+  "$id": "https://github.com/aitooltip/company-brain/schemas/team-member.schema.json",
   "title": "Company Brain Team Member Metadata",
   "type": "object",
   "required": ["id", "name", "status", "role", "departments", "joined", "last_reviewed"],

@@ -15,8 +15,8 @@ import urllib.error
 import urllib.request
 import zipfile
 
-OFFICIAL_SOURCE = "https://github.com/AI-Tooltip/company-brain"
-RELEASE_API = "https://api.github.com/repos/AI-Tooltip/company-brain/releases"
+OFFICIAL_SOURCE = "https://github.com/aitooltip/company-brain"
+RELEASE_API = "https://api.github.com/repos/aitooltip/company-brain/releases"
 USER_AGENT = "AI-Tooltip-Company-Brain-Updater/1.0"
 MAX_ARCHIVE_BYTES = 200 * 1024 * 1024
 MAX_EXTRACTED_BYTES = 500 * 1024 * 1024
@@ -175,7 +175,7 @@ def release_metadata(tag: str | None = None) -> dict[str, Any]:
     if metadata.get("draft") or metadata.get("prerelease"):
         raise UpdateError(f"Release {release_tag} is not a stable published release.")
     archive = metadata.get("zipball_url")
-    expected_prefix = "https://api.github.com/repos/AI-Tooltip/company-brain/zipball/"
+    expected_prefix = "https://api.github.com/repos/aitooltip/company-brain/zipball/"
     if not isinstance(archive, str) or not archive.startswith(expected_prefix):
         raise UpdateError("Official release metadata contains an unexpected archive URL.")
     return metadata

@@ -13,7 +13,7 @@ Subject to this license, AI Tooltip grants you a limited, non-exclusive, non-tra
 - make private modifications solely for your own personal or internal business use;
 - use, including commercially, the company data and outputs you create with the Framework, to the extent legally applicable;
 - publicly show or discuss results you created with the Framework, provided you do not distribute protected Framework material beyond what applicable law permits;
-- link others to the official repository at `https://github.com/AI-Tooltip/company-brain`.
+- link others to the official repository at `https://github.com/aitooltip/company-brain`.
 
 No permission is granted beyond the limited uses stated above.
 

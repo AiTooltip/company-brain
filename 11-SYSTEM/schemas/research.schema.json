@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/AI-Tooltip/company-brain/schemas/research.schema.json",
+  "$id": "https://github.com/aitooltip/company-brain/schemas/research.schema.json",
   "title": "Company Brain Research Metadata",
   "type": "object",
   "required": ["id", "title", "status", "owner", "requested_by", "created", "last_updated", "decision_supported"],

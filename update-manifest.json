@@ -2,7 +2,7 @@
   "$schema": "./11-SYSTEM/schemas/update-manifest.schema.json",
   "schemaVersion": "1.0.0",
   "frameworkVersion": "1.0.0",
-  "source": "https://github.com/AI-Tooltip/company-brain",
+  "source": "https://github.com/aitooltip/company-brain",
   "updateChannel": "stable-releases",
   "releaseTag": "v1.0.0",
   "ownershipResolution": [

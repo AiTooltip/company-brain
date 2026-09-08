@@ -49,7 +49,7 @@ Say **“Check for AI Tooltip updates.”** The read-only checker uses stable re
 
 Only after reviewing the report may you say **“Apply the approved update.”** Company-owned files and existing unlisted files are never automatic overwrite targets.
 
-Official source: [AI-Tooltip/company-brain](https://github.com/AI-Tooltip/company-brain)
+Official source: [aitooltip/company-brain](https://github.com/aitooltip/company-brain)
 
 ## LICENSE
 

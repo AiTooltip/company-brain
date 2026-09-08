@@ -49,4 +49,4 @@ A human with appropriate authority must resolve the conflict. Preserve both vers
 
 ## Important warning
 
-**Do not use a public fork of AI Tooltip Company Brain for confidential company data.** To share the framework itself, link people to `https://github.com/AI-Tooltip/company-brain`. Do not mirror or redistribute it; see `LICENSE.md`.
+**Do not use a public fork of AI Tooltip Company Brain for confidential company data.** To share the framework itself, link people to `https://github.com/aitooltip/company-brain`. Do not mirror or redistribute it; see `LICENSE.md`.

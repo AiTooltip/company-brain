@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/AI-Tooltip/company-brain/schemas/brain-config.schema.json",
+  "$id": "https://github.com/aitooltip/company-brain/schemas/brain-config.schema.json",
   "title": "Company Brain Configuration",
   "type": "object",
   "required": ["schemaVersion", "framework", "paths", "governance", "statusVocabulary"],
@@ -13,9 +13,9 @@
       "properties": {
         "name": { "type": "string", "minLength": 1 },
         "version": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
-        "source": { "const": "https://github.com/AI-Tooltip/company-brain" },
+        "source": { "const": "https://github.com/aitooltip/company-brain" },
         "updateChannel": { "const": "stable-releases" },
-        "releaseApi": { "const": "https://api.github.com/repos/AI-Tooltip/company-brain/releases" },
+        "releaseApi": { "const": "https://api.github.com/repos/aitooltip/company-brain/releases" },
         "developmentBranch": { "const": "main" },
         "updateManifest": { "const": "update-manifest.json" }
       },

@@ -2,7 +2,7 @@
 
 **Trigger:** `Check for AI Tooltip updates`
 
-**Official source:** `https://github.com/AI-Tooltip/company-brain`
+**Official source:** `https://github.com/aitooltip/company-brain`
 
 **Stable channel:** published, non-prerelease GitHub releases tagged `vMAJOR.MINOR.PATCH`
 

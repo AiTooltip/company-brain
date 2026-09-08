@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/AI-Tooltip/company-brain/schemas/decision.schema.json",
+  "$id": "https://github.com/aitooltip/company-brain/schemas/decision.schema.json",
   "title": "Company Brain Approved Decision Metadata",
   "type": "object",
   "required": ["id", "title", "status", "decision_date", "approved_by", "approval_authority", "recorded_by", "recorded_on", "scope", "supersedes", "review_date"],

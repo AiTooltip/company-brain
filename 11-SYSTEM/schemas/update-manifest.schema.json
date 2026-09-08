@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/AI-Tooltip/company-brain/schemas/update-manifest.schema.json",
+  "$id": "https://github.com/aitooltip/company-brain/schemas/update-manifest.schema.json",
   "title": "Company Brain Update Manifest",
   "type": "object",
   "required": ["schemaVersion", "frameworkVersion", "source", "updateChannel", "releaseTag", "ownershipResolution", "frameworkOwned", "companyOwned", "updatePolicy"],
@@ -8,7 +8,7 @@
     "$schema": { "type": "string" },
     "schemaVersion": { "$ref": "#/$defs/version" },
     "frameworkVersion": { "$ref": "#/$defs/version" },
-    "source": { "const": "https://github.com/AI-Tooltip/company-brain" },
+    "source": { "const": "https://github.com/aitooltip/company-brain" },
     "updateChannel": { "const": "stable-releases" },
     "releaseTag": { "type": "string", "pattern": "^v(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$" },
     "ownershipResolution": { "type": "array", "minItems": 5, "items": { "type": "string", "minLength": 1 } },

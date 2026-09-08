@@ -113,8 +113,8 @@ def main() -> int:
         errors.append(f"Framework semantic version mismatch/invalid: config={config_version!r}, manifest={manifest_version!r}")
     if manifest.get("releaseTag") != f"v{manifest_version}":
         errors.append("Manifest releaseTag must equal v plus frameworkVersion.")
-    official_source = "https://github.com/AI-Tooltip/company-brain"
-    release_api = "https://api.github.com/repos/AI-Tooltip/company-brain/releases"
+    official_source = "https://github.com/aitooltip/company-brain"
+    release_api = "https://api.github.com/repos/aitooltip/company-brain/releases"
     if framework_config.get("source") != official_source or manifest.get("source") != official_source:
         errors.append("Config and manifest must use the official AI Tooltip source.")
     if framework_config.get("releaseApi") != release_api:
@@ -166,6 +166,23 @@ def main() -> int:
     for relative in framework:
         if normalized(relative) and not (ROOT / relative).is_file():
             errors.append(f"Manifest framework file does not exist: {relative}")
+
+    retired_owner = "AI-" + "Tooltip"
+    obsolete_repository_references = [
+        f"github.com/{retired_owner}/company-brain",
+        f"api.github.com/repos/{retired_owner}/company-brain",
+    ]
+    for relative in framework:
+        path = ROOT / relative
+        if not path.is_file():
+            continue
+        try:
+            text = path.read_text(encoding="utf-8")
+        except UnicodeDecodeError:
+            continue
+        for obsolete in obsolete_repository_references:
+            if obsolete.lower() in text.lower():
+                errors.append(f"Framework file still references the retired repository location: {relative}")
 
     markdown_link = re.compile(r"\[[^\]]*\]\(([^)]+)\)")
     link_files = {path for path in set(framework) | set(REQUIRED_FILES) if path.endswith(".md")}
