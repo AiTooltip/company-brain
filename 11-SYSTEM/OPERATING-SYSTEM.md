@@ -31,7 +31,7 @@ AI must never:
 
 1. Read `brain.config.json`, this operating system, and the active provider adapter.
 2. Read only the nearest relevant department instructions, canonical records, and workflow. Do not load the entire brain indiscriminately.
-3. Check `.company-brain/current-user.md` when attribution may matter. Treat it as local identity, not proof of authority.
+3. Check `.company-brain/current-user.md` when attribution or personalization may matter. Treat it as local identity, not proof of authority.
 4. Inspect relevant files and version-control state when available. Preserve unrelated work.
 5. State consequential assumptions. Ask only when a missing answer would materially change the result or approval is required.
 
@@ -140,6 +140,12 @@ Shared profiles live in `01-COMPANY/team`. The current computer's ignored `.comp
 
 Attribute meaningful work and approvals only when they are actually attributable. Identity does not imply authority or approval. If consequential attribution is missing, ask; otherwise use `unknown` and flag it.
 
+## Greeting and orientation
+
+When the user's message is primarily a greeting such as “hi,” “hello,” “hey,” or a close equivalent, follow `11-SYSTEM/workflows/greet-and-orient-user.md`. Once a valid local current user is established, greet that person by the name recorded in `.company-brain/current-user.md`; do not infer a name from the operating-system account, folder path, email, or conversation history.
+
+Keep the greeting useful and brief: include a dated digest of the latest meaningful company changes and suggest a few relevant things the Brain can help this user do. Personalize suggestions from the linked team profile and current canonical work, without treating identity, role, or job title as approval authority. A greeting is not meaningful activity and must not be logged.
+
 ## Meaningful memory, not surveillance
 
 Do not permanently log prompts, responses, file reads, tool calls, routine edits, draft iterations, or brainstorming that was not adopted. Log only consequential work involving canonical knowledge, approved decisions, major project changes, meaningful research, major outputs, important ownership changes, launches, pauses, handoffs, or completions.
@@ -150,7 +156,7 @@ Follow `11-SYSTEM/workflows/log-meaningful-activity.md`. Link to the durable rec
 
 Read the relevant department's `AGENTS.md` and company-owned `DEPARTMENT.md`, then retrieve only task-relevant context:
 
-- Creative: brand, relevant product/goals, selected Creative skills, references, and project.
+- Creative: brand, relevant product/goals, selected Creative skills, references, and project. Before substantial branded execution, follow the Creative department's brand-specific skill routing: recommend building a missing relevant skill first and explain the test–feedback–refine quality loop.
 - Business: strategy, goals, products, approved business decisions, and project.
 - Product & Development: product, relevant goals, technical decisions, research, and project.
 - Analytics: metric definitions, experiments/research, relevant goals, product, and project.
@@ -158,6 +164,7 @@ Read the relevant department's `AGENTS.md` and company-owned `DEPARTMENT.md`, th
 ## Natural-language workflows
 
 - **Set up my company brain** → `11-SYSTEM/workflows/initialize-company-brain.md`
+- **Hi / Hello / Hey** → `11-SYSTEM/workflows/greet-and-orient-user.md`
 - **Process the inbox** → `11-SYSTEM/workflows/process-inbox.md`
 - **Start a project** → `11-SYSTEM/workflows/start-project.md`
 - **Record this approved decision** → `11-SYSTEM/workflows/record-approved-decision.md`

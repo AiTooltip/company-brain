@@ -31,8 +31,11 @@ Put the complete `AI-DESIGN-SKILLS` or `codex-design-studio` folder in `00-MIGRA
 
 During setup, identify yourself once. Codex will create ignored `.company-brain/current-user.md` pointing to your shared profile in `01-COMPANY/team/`. It should not ask you to introduce yourself every conversation after that. Identity never automatically grants decision authority.
 
+After that identity is established, a simple **“Hi”** or **“Hello”** will give you a personalized greeting, a quick dated summary of recent meaningful company changes, and a few suggested next actions based on your role and current work.
+
 ## Useful commands
 
+- **Hi** or **Hello**
 - **Process the inbox**
 - **Start a project**
 - **Record this approved decision**

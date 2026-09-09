@@ -18,6 +18,8 @@ The Company Brain keeps knowledge, goals, history, approved decisions, projects,
 
 That's it. Codex analyzes existing material first, asks only for important missing information, and requests approval before establishing consequential conclusions.
 
+Once your local identity is established, say **“Hi”** or **“Hello.”** The Brain will greet you by name, recap the latest dated company activity, and suggest useful next actions based on your role and current work.
+
 ## USED MY PREVIOUS AI TOOLTIP VIDEOS?
 
 1. Put your old `AI-DESIGN-SKILLS` and/or `codex-design-studio` folder into `00-MIGRATE-OLD-SETUP/`.

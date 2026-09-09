@@ -80,6 +80,7 @@
       "11-SYSTEM/workflows/README.md",
       "11-SYSTEM/workflows/apply-approved-update.md",
       "11-SYSTEM/workflows/check-for-ai-tooltip-updates.md",
+      "11-SYSTEM/workflows/greet-and-orient-user.md",
       "11-SYSTEM/workflows/initialize-company-brain.md",
       "11-SYSTEM/workflows/log-meaningful-activity.md",
       "11-SYSTEM/workflows/migrate-previous-ai-tooltip-setup.md",

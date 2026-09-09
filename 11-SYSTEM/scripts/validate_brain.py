@@ -39,7 +39,7 @@ REQUIRED_FILES = [
     "11-SYSTEM/schemas/project.schema.json", "11-SYSTEM/schemas/decision.schema.json", "11-SYSTEM/schemas/product.schema.json",
     "11-SYSTEM/schemas/team-member.schema.json", "11-SYSTEM/schemas/research.schema.json", "11-SYSTEM/schemas/goal.schema.json",
     "11-SYSTEM/migrations/ai-design-skills.md", "11-SYSTEM/migrations/codex-design-studio.md",
-    "11-SYSTEM/workflows/initialize-company-brain.md", "11-SYSTEM/workflows/process-inbox.md", "11-SYSTEM/workflows/start-project.md",
+    "11-SYSTEM/workflows/initialize-company-brain.md", "11-SYSTEM/workflows/greet-and-orient-user.md", "11-SYSTEM/workflows/process-inbox.md", "11-SYSTEM/workflows/start-project.md",
     "11-SYSTEM/workflows/record-approved-decision.md", "11-SYSTEM/workflows/log-meaningful-activity.md", "11-SYSTEM/workflows/onboard-team-member.md",
     "11-SYSTEM/workflows/migrate-previous-ai-tooltip-setup.md", "11-SYSTEM/workflows/check-for-ai-tooltip-updates.md", "11-SYSTEM/workflows/apply-approved-update.md",
     "02-DEPARTMENTS/Creative/workflows/build-core-brand.md", "02-DEPARTMENTS/Creative/workflows/build-brand-skill.md",
